@@ -528,3 +528,437 @@ a { color: inherit; text-decoration: none; }
     .nav-links a:not(.nav-cta) { display: none; }
     .hero { padding: 3rem 1rem 2rem; }
 }
+
+
+/* ============================
+   TERMS OF SERVICE STYLES
+   ============================ */
+
+/* Base Section Styling */
+.terms-section {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.terms-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Header Styling */
+.terms-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.terms-header h1 {
+    font-size: 28px;
+    color: #1a2b45;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+    position: relative;
+}
+
+.terms-header h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #217346);
+}
+
+/* Article Container */
+.terms-article {
+    background: transparent;
+}
+
+/* Section Headers */
+.terms-intro h2 {
+    font-size: 24px;
+    color: #1a2b45;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 4px solid #3498db;
+}
+
+.terms-section h3 {
+    font-size: 18px;
+    color: #2d3e50;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid #6c7a8b;
+    font-weight: 600;
+}
+
+/* Body Content */
+.terms-section p {
+    color: #495057;
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+/* Links in Terms */
+.terms-section a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.terms-section a:hover {
+    color: #217346;
+    text-decoration: underline;
+}
+
+/* Email Link Specific */
+.terms-section .mailto-link {
+    color: #217346;
+    font-weight: 500;
+}
+
+/* Section Spacing */
+.terms-content {
+    padding-top: 2rem;
+}
+
+/* Optional Responsive Styles */
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 1.5rem;
+        border-radius: 0;
+    }
+
+    .terms-section {
+        padding: 2rem 1rem;
+    }
+
+    .terms-header h1 {
+        font-size: 24px;
+    }
+
+    .terms-intro h2 {
+        font-size: 20px;
+    }
+
+    .terms-section h3 {
+        font-size: 16px;
+    }
+
+    .terms-content p {
+        text-align: left;
+        font-size: 15px;
+    }
+}
+
+/* Mobile Specific */
+@media (max-width: 480px) {
+    .terms-container {
+        padding: 1rem;
+    }
+
+    .terms-header h1 {
+        font-size: 22px;
+    }
+
+    .terms-section {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Accessibility */
+.terms-section p:focus {
+    outline: none;
+}
+
+.terms-section a:focus-visible {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   TERMS OF SERVICE
+   ========================================= */
+
+/* Main Terms Page Section */
+.terms-section {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Main Container */
+.terms-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text-primary, #333);
+    background: var(--bg-light, #f8f9fa);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+.terms-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.terms-header h1 {
+    font-size: 28px;
+    color: var(--spendly-dark, #1a2b45);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+    position: relative;
+}
+
+.terms-header h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        var(--spendly-green, #3498db),
+        var(--spendly-green-hover, #217346)
+    );
+}
+
+/* Article */
+.terms-article {
+    background: transparent;
+}
+
+/* Introduction */
+.terms-intro {
+    margin-bottom: 2rem;
+}
+
+.terms-intro h2 {
+    font-size: 24px;
+    color: var(--spendly-dark, #1a2b45);
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 4px solid var(--spendly-green, #3498db);
+}
+
+/*
+   IMPORTANT:
+   Do NOT apply padding/max-width here.
+   These are the individual sections.
+*/
+.terms-content {
+    padding-top: 1rem;
+}
+
+.terms-content .terms-section {
+    padding: 0;
+    max-width: none;
+    margin: 0 0 2.5rem 0;
+}
+
+/* Section Headers */
+.terms-content .terms-section h3 {
+    font-size: 18px;
+    color: var(--spendly-dark, #2d3e50);
+    margin: 0 0 1rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--spendly-light, #6c7a8b);
+    font-weight: 600;
+}
+
+/* Paragraphs */
+.terms-content .terms-section p {
+    color: var(--text-secondary, #495057);
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+/* Links */
+.terms-section a {
+    color: var(--spendly-green, #3498db);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.terms-section a:hover {
+    color: var(--spendly-green-hover, #217346);
+    text-decoration: underline;
+}
+
+/* Email Link */
+.terms-section .mailto-link {
+    color: var(--spendly-green-hover, #217346);
+    font-weight: 500;
+}
+
+/* Footer */
+.terms-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.related-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.related-links a {
+    color: var(--spendly-green, #3498db);
+    text-decoration: none;
+}
+
+.related-links a:hover {
+    color: var(--spendly-green-hover, #217346);
+    text-decoration: underline;
+}
+
+/* =========================================
+   TABLET / MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .terms-section {
+        padding: 2rem 1rem;
+    }
+
+    .terms-container {
+        padding: 1.5rem;
+        border-radius: 10px;
+    }
+
+    .terms-header {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .terms-header h1 {
+        font-size: 24px;
+    }
+
+    .terms-intro h2 {
+        font-size: 20px;
+    }
+
+    .terms-content .terms-section h3 {
+        font-size: 16px;
+    }
+
+    .terms-content .terms-section p {
+        text-align: left;
+        font-size: 15px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .terms-section {
+        padding: 1rem;
+    }
+
+    .terms-container {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .terms-header h1 {
+        font-size: 22px;
+    }
+
+    .terms-intro h2 {
+        font-size: 19px;
+    }
+
+    .terms-content .terms-section {
+        margin-bottom: 2rem;
+    }
+
+    .terms-content .terms-section p {
+        font-size: 14px;
+    }
+
+    .related-links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+/* Accessibility */
+.terms-section a:focus-visible {
+    outline: 2px solid var(--spendly-green, #3498db);
+    outline-offset: 2px;
+}
+
+/* =========================================
+   SPENDLY THEME VARIABLES
+   ========================================= */
+
+:root {
+    /* Primary Colors */
+    --spendly-dark: #2d3e50;
+    --spendly-light: #6c7a8b;
+
+    /* Accent Colors */
+    --spendly-green: #3498db;
+    --spendly-green-hover: #217346;
+
+    /* Text Colors */
+    --text-primary: #333;
+    --text-secondary: #495057;
+
+    /* Background Colors */
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+
+    /* Spacing */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+}
+
+.terms-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+    color: var(--text-primary);
+}
