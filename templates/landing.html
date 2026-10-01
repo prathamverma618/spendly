@@ -16,7 +16,7 @@
         </p>
         <div class="hero-actions">
             <a href="{{ url_for('register') }}" class="btn-primary">Create free account</a>
-            <a href="{{ url_for('login') }}" class="btn-ghost">See how it works</a>
+            <button class="btn-ghost" id="demo-btn">See how it works</button>
         </div>
     </div>
     <div class="hero-visual">
@@ -95,4 +95,74 @@
     </div>
 </section>
 
+<!-- Demo Modal -->
+<div class="modal" id="demo-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>See Spendly in action</h2>
+            <button class="modal-close" id="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="video-container">
+                <iframe
+                    id="demo-video"
+                    width="100%"
+                    height="500"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Demo Modal Handler
+    const demoBtn = document.getElementById('demo-btn');
+    const demoModal = document.getElementById('demo-modal');
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const modalClose = document.getElementById('modal-close');
+    const demoVideo = document.getElementById('demo-video');
+
+    // Open modal when "See how it works" is clicked
+    demoBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        demoModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+
+    // Close modal when close button is clicked
+    modalClose.addEventListener('click', function() {
+        closeModal();
+    });
+
+    // Close modal when overlay is clicked
+    modalOverlay.addEventListener('click', function() {
+        closeModal();
+    });
+
+    // Close modal when Escape key is pressed
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && demoModal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    // Function to close modal and stop video
+    function closeModal() {
+        demoModal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+
+        // Stop video by replacing iframe src with itself (clears playback state)
+        const videoSrc = demoVideo.src;
+        demoVideo.src = '';
+        demoVideo.src = videoSrc;
+    }
+</script>
 {% endblock %}
